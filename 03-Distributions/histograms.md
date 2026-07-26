@@ -166,7 +166,7 @@ This insight is much easier to understand visually than by reading the raw numbe
 
 Imagine a histogram that looks like this:
 
-![Histogram Example](../images/histogram-example.png)
+![Histogram Example](/images/histogram-example.png)
 
 The histogram above shows how observations are distributed across different value ranges.
 
