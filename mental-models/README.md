@@ -28,6 +28,12 @@ Descriptive statistics helps us summarize a crowd without interviewing every per
 
 ---
 
+## Normal Distribution
+
+The normal distribution is nature's favorite way of organizing randomness around an average.
+
+---
+
 ## Future Mental Models
 
 As the repository grows, this file will become a collection of memorable explanations and intuition-first summaries.
