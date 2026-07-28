@@ -1,104 +1,108 @@
 # Mental Models
 
-This file contains one-line memory hooks designed to make statistical concepts easier to remember.
+This file contains one-line memory hooks designed to make statistics memorable.
 
 The goal is not mathematical precision.
 
-The goal is recall.
-
-If a concept can be remembered quickly, it can be reconstructed later.
-
-These mental models are built as part of the Statistics for Machine Learning learning journey.
+The goal is understanding and recall.
 
 ---
 
-## Why This File Exists
+# Descriptive Statistics
 
-Statistics can become formula-heavy very quickly.
+## Mean
 
-But formulas are easier to understand when the intuition is clear first.
+The mean is where the dataset would balance if every value were placed on a seesaw.
 
-This file collects the simplest, most memorable way to think about each concept.
+### Reminder
 
-Use this file when you want to quickly revise ideas before going deeper into the full notes.
+The mean uses every value.
 
----
-
-## Repository Learning Philosophy
-
-Each concept in this repository should ideally be understood at four levels:
-
-1. Plain-English intuition
-2. Mental model
-3. Mathematical definition
-4. Machine Learning / AI application
-
-This file focuses mainly on level 2: mental models.
+Because of this, it is sensitive to outliers.
 
 ---
 
-# Core Mental Models
+## Median
+
+The median does not care how extreme the outliers are.
+
+It only cares who stands in the middle.
+
+### Reminder
+
+The median is the middle person in a line.
 
 ---
+
+## Mode
+
+The mode is the crowd favorite.
+
+It tells us what appears most often.
+
+### Reminder
+
+The mode is what keeps showing up.
+
+---
+
+## Variance
+
+The average tells me where the crowd is.
+
+Variance tells me how tightly packed the crowd is.
+
+### Reminder
+
+Two datasets can share the same mean while having very different variance.
+
+---
+
+## Standard Deviation
+
+Standard deviation is the typical distance people stand from the center of the crowd.
+
+### Reminder
+
+Variance measures spread mathematically.
+
+Standard deviation measures spread in units humans can understand.
+
+---
+
+## Descriptive Statistics
+
+Descriptive statistics helps us summarize a crowd without interviewing every person in it.
+
+### Reminder
+
+If probability is about uncertainty,
+
+descriptive statistics is about understanding what we already observed.
+
+---
+
+# Distributions
 
 ## Histogram
 
 A histogram is a bird's-eye view of where the data likes to hang out.
 
-### Expanded Intuition
+### Reminder
 
-A histogram does not tell us every individual value.
-
-Instead, it groups values into ranges and shows where most of the data is concentrated.
-
-It helps answer:
-
-- Where does most of the data live?
-- Are there unusual values?
-- Is the data spread out or tightly packed?
-- Does the data have one cluster or multiple clusters?
-
----
-
-## Probability
-
-Probability is our way of reasoning when we do not know the future with certainty.
-
-### Expanded Intuition
-
-Probability helps us think clearly about uncertainty.
-
-Instead of saying something will definitely happen, we describe how likely it is to happen.
-
-Machine learning models do this all the time.
-
-They rarely say:
-
-"This is absolutely correct."
-
-They usually say something closer to:
-
-"This outcome is more likely than the others."
+Histograms show observed data.
 
 ---
 
 ## Probability Distribution
 
-A probability distribution is a map of uncertainty that shows what can happen and how often it tends to happen.
+A probability distribution is a map of uncertainty that shows what can happen and how often.
 
-### Expanded Intuition
-
-A probability distribution tells us all possible outcomes and assigns a likelihood to each one.
-
-It does not guarantee what will happen next.
-
-It tells us what tends to happen over many observations.
-
-### Simple Reminder
+### Reminder
 
 Individual outcomes are unpredictable.
 
-Long-term patterns are often predictable.
+Long-term patterns are predictable.
 
 ---
 
@@ -106,15 +110,7 @@ Long-term patterns are often predictable.
 
 The normal distribution is nature's favorite way of organizing randomness around an average.
 
-### Expanded Intuition
-
-In a normal distribution, most values gather near the center.
-
-Values far away from the center become less common.
-
-Extreme values are rare.
-
-### Simple Reminder
+### Reminder
 
 The center is common.
 
@@ -126,97 +122,33 @@ The tails are rare.
 
 The exponential distribution is the statistics of waiting.
 
-### Expanded Intuition
-
-The exponential distribution models how long we wait until the next event happens.
+### Reminder
 
 Short waits are common.
 
 Long waits are rare.
 
-Very long waits are possible, but uncommon.
+---
 
-### Simple Reminder
+# Statistical Inference
 
-The exponential distribution asks:
+## Population
 
-"How long until the next event?"
+The population contains the truth.
+
+### Reminder
+
+The population is the full group we care about.
 
 ---
 
-## Mean
+## Sample
 
-The mean is where the dataset would balance if every value were placed on a seesaw.
+The sample contains clues.
 
-### Expanded Intuition
+### Reminder
 
-The mean is the arithmetic average.
-
-It uses every value in the dataset.
-
-Because of this, it is sensitive to extreme values.
-
-### Simple Reminder
-
-The mean is the balancing point of the data.
-
----
-
-## Median
-
-The median does not care how extreme the outliers are.
-
-It only cares who stands in the middle.
-
-### Expanded Intuition
-
-The median is the middle value after sorting the data.
-
-It is useful when data contains outliers or is heavily skewed.
-
-### Simple Reminder
-
-The median is the middle person in the line.
-
----
-
-## Mode
-
-The mode is the crowd favorite.
-
-It tells us what appears most often.
-
-### Expanded Intuition
-
-The mode is the most frequent value in a dataset.
-
-It is useful when we care about popularity or repetition.
-
-### Simple Reminder
-
-The mode is what shows up again and again.
-
----
-
-## Descriptive Statistics
-
-Descriptive statistics helps us summarize a crowd without interviewing every person in it.
-
-### Expanded Intuition
-
-Descriptive statistics helps us understand what has already happened.
-
-It gives us tools to describe:
-
-- What is typical
-- How spread out the data is
-- What appears most often
-- Whether values are unusual
-- How variables relate to each other
-
-### Simple Reminder
-
-If probability is about uncertainty, descriptive statistics is about understanding what we already observed.
+Samples help us estimate population characteristics.
 
 ---
 
@@ -228,281 +160,195 @@ The sample gives us clues.
 
 Statistics turns those clues into estimates.
 
-### Expanded Intuition
+### Reminder
 
-In statistics, we often want to know something about an entire population.
-
-But usually, we cannot measure everyone or everything.
-
-So we take a sample and use it to estimate the true population value.
-
-The population parameter is the real value.
-
-The estimated parameter is our best guess based on sample data.
-
-### Simple Reminder
-
-We rarely get the whole truth.
-
-So statistics helps us make smart guesses from partial evidence.
+Statistics is the science of making smart guesses from incomplete information.
 
 ---
 
-# Concept Relationships
+# Mathematical Models
+
+## Mathematical Model
+
+A mathematical model is a map, not the territory.
+
+It simplifies reality so we can understand and navigate it.
+
+### Reminder
+
+A useful model does not need to be perfect.
+
+It needs to capture important patterns.
 
 ---
 
-## Histogram vs Probability Distribution
+# Hypothesis Testing
 
-A histogram shows what happened.
+## Hypothesis Testing
 
-A probability distribution describes what tends to happen.
+Hypothesis testing is a courtroom trial for ideas.
 
-### Simple Reminder
+### Reminder
 
-Histogram = observed data.
+Statistics starts with skepticism.
 
-Probability distribution = underlying pattern.
-
----
-
-## Normal Distribution vs Exponential Distribution
-
-The normal distribution asks:
-
-"Where do values gather?"
-
-The exponential distribution asks:
-
-"How long until the next event?"
-
-### Simple Reminder
-
-Normal distribution = values around an average.
-
-Exponential distribution = waiting time until something happens.
+Evidence must earn our belief.
 
 ---
 
-## Mean vs Median
+## Null Hypothesis
 
-The mean listens to every value.
+The null hypothesis is innocent until strong evidence proves otherwise.
 
-The median listens only to the middle.
+### Reminder
 
-### Simple Reminder
+The null hypothesis is the default story.
 
-The mean can be pulled by outliers.
-
-The median stands firm.
+Nothing unusual is happening.
 
 ---
 
-## Mean vs Mode
+## Alternative Hypothesis
 
-The mean gives the mathematical center.
+The alternative hypothesis is the challenger trying to replace the default story.
 
-The mode gives the most common value.
+### Reminder
 
-### Simple Reminder
+Something meaningful is happening.
 
-Mean = balance point.
-
-Mode = crowd favorite.
+Something has changed.
 
 ---
 
-## Population vs Sample
+## Null vs Alternative
 
-The population is the full crowd.
+The null hypothesis is the default story.
 
-The sample is the group we actually ask.
+The alternative hypothesis is the challenger trying to replace it.
 
-### Simple Reminder
+### Reminder
 
-Population = everyone we care about.
-
-Sample = the subset we observe.
+Data acts as the evidence.
 
 ---
 
-# Rock & Metal Inspired Mental Models
+## p-value
 
-These are used selectively where they genuinely help.
+A p-value is a surprise meter.
 
----
+The smaller it is, the harder it becomes to explain the data using the null hypothesis.
 
-## Histogram - Metal Playlist Version
+### Reminder
 
-A histogram shows whether most songs are short radio-friendly tracks or long progressive metal epics.
+p-value does NOT measure:
 
-### Simple Reminder
+- the probability that the null hypothesis is true
+- the probability that your conclusion is correct
 
-The histogram shows where the playlist's song lengths like to gather.
+It measures:
 
----
-
-## Outlier
-
-An outlier is the 22-minute progressive metal epic on an album full of 4-minute songs.
-
-### Simple Reminder
-
-An outlier is not just different.
-
-It is noticeably far from the rest of the crowd.
-
----
-
-## Mean Song Length
-
-The mean song length tells us the average track duration if the album's total runtime were evenly distributed.
-
-### Simple Reminder
-
-The mean spreads the total runtime equally across all songs.
-
----
-
-## Variability Preview
-
-Two bands can have the same average song length, but one may write consistent 5-minute songs while the other jumps between 2-minute tracks and 15-minute epics.
-
-### Simple Reminder
-
-Same average does not mean same spread.
+How surprising the data would be if the null hypothesis were true.
 
 ---
 
 # Machine Learning Mental Models
 
----
-
-## Training Data as a Sample
+## Training Data
 
 A training dataset is a sample of the real world.
 
-### Simple Reminder
+### Reminder
 
-The model learns from the sample, but must survive in the population.
+Models learn from samples but must perform on populations.
 
 ---
 
 ## Model Evaluation
 
-A test set is our sample-based estimate of how the model might perform in the real world.
+A test set is our estimate of real-world performance.
 
-### Simple Reminder
+### Reminder
 
-Test performance is not the full truth.
-
-It is an estimate.
+Test performance is evidence, not truth.
 
 ---
 
 ## RAG Evaluation
 
-A set of test questions is a sample used to estimate how well a RAG system retrieves and answers in production.
-
-### Simple Reminder
-
-A RAG benchmark is a spoonful of soup.
+A benchmark is a spoonful of soup.
 
 It helps estimate the flavor of the whole pot.
+
+### Reminder
+
+Good evaluation requires representative samples.
 
 ---
 
 ## LLM Evaluation
 
-We cannot test every possible prompt, so we evaluate a sample and estimate overall behavior.
-
-### Simple Reminder
-
 LLM evaluation is estimation under uncertainty.
+
+### Reminder
+
+We never test every possible prompt.
+
+Only a sample.
+
+---
+
+# Rock & Metal Collection
+
+## Outlier
+
+An outlier is the 22-minute progressive metal epic on an album full of 4-minute songs.
+
+### Reminder
+
+Outliers are not just different.
+
+They are unusually far from the crowd.
+
+---
+
+## Mean Song Length
+
+The mean song length tells us the average track duration if the album's runtime were evenly distributed.
+
+---
+
+## Variability
+
+Two bands can have the same average song length and completely different variance.
+
+### Reminder
+
+Same average.
+
+Different spread.
+
+Different story.
 
 ---
 
 # Quick Revision Table
 
 | Concept | Mental Model |
-|---|---|
-| Histogram | A bird's-eye view of where the data likes to hang out. |
-| Probability | Reasoning when we do not know the future with certainty. |
-| Probability Distribution | A map of uncertainty showing what can happen and how often. |
-| Normal Distribution | Nature's favorite way of organizing randomness around an average. |
-| Exponential Distribution | The statistics of waiting. |
-| Mean | The balancing point of the dataset. |
-| Median | The middle person in the line. |
-| Mode | The crowd favorite. |
-| Descriptive Statistics | Summarizing a crowd without interviewing every person. |
-| Population Parameter | The true value we want to know. |
-| Estimated Parameter | Our best guess from a sample. |
-| Sample | The clues we actually observe. |
-| Population | The full truth we care about. |
-| Outlier | The 22-minute epic among 4-minute songs. |
-
----
-
-# Current Topic Coverage
-
-The following concepts have mental models so far:
-
-- Histogram
-- Probability
-- Probability Distribution
-- Normal Distribution
-- Exponential Distribution
-- Mean
-- Median
-- Mode
-- Descriptive Statistics
-- Population
-- Sample
-- Population Parameter
-- Estimated Parameter
-- Outlier
-
----
-
-# Future Mental Models To Add
-
-As the repository grows, add mental models for:
-
-- Variance
-- Standard Deviation
-- Covariance
-- Correlation
-- Conditional Probability
-- Bayes' Theorem
-- Expected Value
-- Binomial Distribution
-- Central Limit Theorem
-- Confidence Intervals
-- Null Hypothesis
-- Alternative Hypothesis
-- p-values
-- Statistical Power
-- Linear Regression
-- Logistic Regression
-- Bias-Variance Tradeoff
-- A/B Testing
-- RAG Evaluation
-- Prompt Testing
-- LLM Benchmarks
-
----
-
-# Maintenance Rule
-
-Whenever a new topic file is added, update this file with:
-
-1. A short mental model
-2. Expanded intuition
-3. Optional relationship to previous concepts
-4. Optional rock/metal analogy if it genuinely helps
-
-Do not force analogies.
-
-The goal is not to be clever.
-
-The goal is to make the idea unforgettable.
+|----------|-------------|
+| Histogram | Bird's-eye view of where data hangs out |
+| Probability | Reasoning under uncertainty |
+| Probability Distribution | Map of uncertainty |
+| Normal Distribution | Nature's favorite organization of randomness |
+| Exponential Distribution | Statistics of waiting |
+| Mean | Balance point |
+| Median | Person in the middle |
+| Mode | Crowd favorite |
+| Variance | How tightly packed the crowd is |
+| Standard Deviation | Typical distance from the center |
+| Population | The truth |
+| Sample | The clues |
+| Mathematical Model | Map, not territory |
+| Hypothesis Testing | Courtroom trial for ideas |
+| Null Hypothesis | Innocent until proven otherwise |
+| Alternative Hypothesis | Challenger to the default story |
+| p-value | Surprise meter |
